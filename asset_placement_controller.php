@@ -18,12 +18,6 @@ $store_library=return_library_array( "select id,store_name from lib_store_locati
 
 //--------------------------------------------------------------------------------------------
 //load drop down company location
-if ($action=="load_drop_down_location")
-{
-	echo create_drop_down( "cbo_location", 170, "select id,location_name from lib_location where status_active =1 and is_deleted=0 and company_id='$data' order by location_name","id,location_name", 1, "-- Select Location --", $selected, "load_drop_down( 'requires/asset_placement_controller', document.getElementById('cbo_company_name').value+'_'+this.value, 'load_drop_down_floor', 'floor_td' ); 	show_list_view(document.getElementById('cbo_company_name').value +'_'+ document.getElementById('cbo_location').value +'_'+ document.getElementById('cbo_division').value +'_'+ document.getElementById('cbo_department').value +'_'+ document.getElementById('cbo_section').value +'_'+ document.getElementById('cbo_subsec').value +'_'+ document.getElementById('cbo_floor').value +'_'+ document.getElementById('txt_room_no').value +'_'+ document.getElementById('txt_placing_date').value,'show_asset_active_listview','asset_list_view','requires/asset_placement_controller','');",0, "", "", "", "", "2", "", "" );     	 
-	exit();
-}
-
 if ($action=="load_drop_down_division")
 {
 	echo create_drop_down( "cbo_division", 170, "select id,division_name from lib_division where status_active =1 and is_deleted=0 and company_id='$data' order by division_name","id,division_name", 1, "-- Select Division --", $selected, "load_drop_down( 'requires/asset_placement_controller', this.value, 'load_drop_down_department', 'department_td'); show_list_view(document.getElementById('cbo_company_name').value +'_'+ document.getElementById('cbo_location').value +'_'+ document.getElementById('cbo_division').value +'_'+ document.getElementById('cbo_department').value +'_'+ document.getElementById('cbo_section').value +'_'+ document.getElementById('cbo_subsec').value +'_'+ document.getElementById('cbo_floor').value +'_'+ document.getElementById('txt_room_no').value +'_'+ document.getElementById('txt_placing_date').value,'show_asset_active_listview','asset_list_view','requires/asset_placement_controller','');",0, "", "", "", "", "3", "", "" );     	 
